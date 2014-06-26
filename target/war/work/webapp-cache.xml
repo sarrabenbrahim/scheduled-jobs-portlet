@@ -1,0 +1,179 @@
+<webapp-structure>
+  <registeredFiles>
+    <entry>
+      <string>currentBuild</string>
+      <path-set>
+        <pathsSet class="linked-hash-set">
+          <string>jsp/jobs.jsp</string>
+          <string>jsp/edit.jsp</string>
+          <string>jsp/help.jsp</string>
+          <string>WEB-INF/portlet.xml</string>
+          <string>WEB-INF/web.xml</string>
+          <string>META-INF/MANIFEST.MF</string>
+          <string>WEB-INF/classes/org/exo/portal/portlet/samples/ScheduledJob.class</string>
+          <string>WEB-INF/lib/jstl-1.2.jar</string>
+        </pathsSet>
+      </path-set>
+    </entry>
+  </registeredFiles>
+  <dependenciesInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>javax.portlet</groupId>
+        <artifactId>portlet-api</artifactId>
+        <version>2.0</version>
+        <type>jar</type>
+        <scope>provided</scope>
+        <exclusions/>
+        <locations class="linked-hash-map">
+          <entry>
+            <string></string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>34</lineNumber>
+              <columnNumber>17</columnNumber>
+              <source>
+                <modelId>org.exoplatform.platform:scheduled-job:4.0.6</modelId>
+                <location>/home/sarra/scheduled-job/pom.xml</location>
+              </source>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>groupId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>35</lineNumber>
+              <columnNumber>16</columnNumber>
+              <source reference="../../../entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>artifactId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>36</lineNumber>
+              <columnNumber>19</columnNumber>
+              <source reference="../../../entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>scope</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>37</lineNumber>
+              <columnNumber>14</columnNumber>
+              <source reference="../../../entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>version</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>297</lineNumber>
+              <columnNumber>18</columnNumber>
+              <source>
+                <modelId>org.exoplatform:maven-depmgt-pom:7.5</modelId>
+                <location>/home/sarra/.m2/repository/org/exoplatform/maven-depmgt-pom/7.5/maven-depmgt-pom-7.5.pom</location>
+              </source>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+        </locations>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>org.exoplatform.kernel</groupId>
+        <artifactId>exo.kernel.component.common</artifactId>
+        <version>2.4.9-GA</version>
+        <type>jar</type>
+        <scope>provided</scope>
+        <exclusions/>
+        <locations class="linked-hash-map">
+          <entry>
+            <string></string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>44</lineNumber>
+              <columnNumber>17</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>groupId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>45</lineNumber>
+              <columnNumber>16</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>artifactId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>46</lineNumber>
+              <columnNumber>19</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>scope</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>47</lineNumber>
+              <columnNumber>14</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>version</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>81</lineNumber>
+              <columnNumber>18</columnNumber>
+              <source>
+                <modelId>org.exoplatform.jcr:jcr-parent:1.15.9-GA</modelId>
+                <location>/home/sarra/.m2/repository/org/exoplatform/jcr/jcr-parent/1.15.9-GA/jcr-parent-1.15.9-GA.pom</location>
+              </source>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+        </locations>
+      </dependency>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+    <org.apache.maven.plugin.war.util.DependencyInfo>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>1.2</version>
+        <type>jar</type>
+        <scope>compile</scope>
+        <exclusions/>
+        <locations class="linked-hash-map">
+          <entry>
+            <string></string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>49</lineNumber>
+              <columnNumber>15</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>groupId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>50</lineNumber>
+              <columnNumber>14</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>artifactId</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>51</lineNumber>
+              <columnNumber>17</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+          <entry>
+            <string>version</string>
+            <org.apache.maven.model.InputLocation>
+              <lineNumber>52</lineNumber>
+              <columnNumber>14</columnNumber>
+              <source reference="../../../../../../org.apache.maven.plugin.war.util.DependencyInfo/dependency/locations/entry/org.apache.maven.model.InputLocation/source"/>
+            </org.apache.maven.model.InputLocation>
+          </entry>
+        </locations>
+      </dependency>
+      <targetFileName>jstl-1.2.jar</targetFileName>
+    </org.apache.maven.plugin.war.util.DependencyInfo>
+  </dependenciesInfo>
+</webapp-structure>
