@@ -26,7 +26,7 @@
 <td>${aJob.getJobClass()}</td>
 <td>${aJob.getJobDataMap()}</td>
 <c:forEach items="${triggerlist}" var="trigger">
-<td>${trigger}</td>
+<td>${trigger.getNextFireTime()}</td>
 </c:forEach>
 </tr>
 </c:forEach>
