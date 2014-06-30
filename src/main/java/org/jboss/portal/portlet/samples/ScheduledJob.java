@@ -53,7 +53,7 @@ public class ScheduledJob extends GenericPortlet {
             List<JobDetail> temp = jobService.getAllJobs();
             for (JobDetail aJob : temp) {
                 jobs.add((JobDetailImpl) aJob);
-                triggers = jobService.getTriggersOfJob(((JobDetailImpl) aJob).getName(), ((JobDetailImpl) aJob).getGroup());
+                triggers = jobService.getTriggersOfJob(((JobDetailImpl) aJob).getName(), ((JobDetailImpl) aJob).getGroup().split(":")[1]);
                 for (Trigger trigger : triggers) {
                     trs.add(trigger);
 
