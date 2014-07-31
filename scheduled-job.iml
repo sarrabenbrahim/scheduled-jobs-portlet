@@ -29,6 +29,15 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.mail:mail:1.4.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.jgroups:jgroups:2.6.20.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Bureau/jquery-1.9.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

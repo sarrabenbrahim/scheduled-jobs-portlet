@@ -1,25 +1,4 @@
-/******************************************************************************
- * JBoss, a division of Red Hat                                               *
- * Copyright 2008, Red Hat Middleware, LLC, and individual                    *
- * contributors as indicated by the @authors tag. See the                     *
- * copyright.txt in the distribution for a full listing of                    *
- * individual contributors.                                                   *
- *                                                                            *
- * This is free software; you can redistribute it and/or modify it            *
- * under the terms of the GNU Lesser General Public License as                *
- * published by the Free Software Foundation; either version 2.1 of           *
- * the License, or (at your option) any later version.                        *
- *                                                                            *
- * This software is distributed in the hope that it will be useful,           *
- * but WITHOUT ANY WARRANTY; without even the implied warranty of             *
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU           *
- * Lesser General Public License for more details.                            *
- *                                                                            *
- * You should have received a copy of the GNU Lesser General Public           *
- * License along with this software; if not, write to the Free                *
- * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA         *
- * 02110-1301 USA, or see the FSF site: http://www.fsf.org.                   *
- ******************************************************************************/
+
 package org.jboss.portal.portlet.samples;
 
 import org.exoplatform.container.ExoContainer;
@@ -28,6 +7,7 @@ import org.exoplatform.container.PortalContainer;
 import org.exoplatform.container.RootContainer;
 import org.exoplatform.services.scheduler.JobSchedulerService;
 import org.quartz.JobDetail;
+import org.quartz.Scheduler;
 import org.quartz.Trigger;
 import org.quartz.impl.JobDetailImpl;
 
@@ -37,11 +17,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
 public class ScheduledJob extends GenericPortlet {
 
  public static String JOBS = "jobsList";
  public static String TRIGGERS = "triggerlist";
+ public static String SCHEDULER = "Scheduler";
 
     public void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException {
         JobSchedulerService jobService = getService(JobSchedulerService.class);
@@ -49,15 +29,19 @@ public class ScheduledJob extends GenericPortlet {
         List<Trigger> trs = new ArrayList<Trigger>();
         List<JobDetailImpl> jobs = new ArrayList<JobDetailImpl>();
         Trigger[] triggers = new Trigger[0];
+        Scheduler scheduler = null;
         try {
             List<JobDetail> temp = jobService.getAllJobs();
             for (JobDetail aJob : temp) {
                 jobs.add((JobDetailImpl) aJob);
-                triggers = jobService.getTriggersOfJob(((JobDetailImpl) aJob).getName(), ((JobDetailImpl) aJob).getGroup().split(":")[1]);
+                scheduler.triggerJob(aJob.getKey());
+                triggers = jobService.getTriggersOfJob(((JobDetailImpl) aJob).getName(),((JobDetailImpl) aJob).getGroup().split(":")[1]);
                 for (Trigger trigger : triggers) {
                     trs.add(trigger);
 
-                }
+
+      }
+
 
             }
         } catch (Exception e) {
@@ -65,9 +49,13 @@ public class ScheduledJob extends GenericPortlet {
         }
         request.setAttribute(JOBS, jobs);
         request.setAttribute(TRIGGERS, triggers);
+        request.setAttribute(SCHEDULER, scheduler);
         PortletRequestDispatcher prd = getPortletContext().getRequestDispatcher("/jsp/jobs.jsp");
         prd.include(request, response);
     }
+
+
+
 
     public static <T> T getService(Class<T> clazz) {
         String containerName = "portal";

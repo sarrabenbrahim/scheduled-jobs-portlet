@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="gatein-jsp-hellouser" />
+        <module name="scheduled-job" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gatein-jsp-hellouser" target="1.5" />
+      <module name="scheduled-job" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -33,7 +33,7 @@
               <columnNumber>17</columnNumber>
               <source>
                 <modelId>org.exoplatform.platform:scheduled-job:4.0.6</modelId>
-                <location>/home/sarra/scheduled-job/pom.xml</location>
+                <location>/home/sarra/scheduled-jobs-portlet/pom.xml</location>
               </source>
             </org.apache.maven.model.InputLocation>
           </entry>
