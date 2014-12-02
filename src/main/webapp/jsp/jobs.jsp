@@ -14,7 +14,6 @@
  <th>Job Group</th>
  <th>Properties</th>
  <th>Job DataMap</th>
- <th>Fire now</th>
 </tr>
 </thead>
 <tbody>
@@ -28,7 +27,6 @@
   ${trigger.getNextFireTime()}
   </c:forEach>
   </td>
-  <td>${executeJob}</td>
  </tr>
 </c:forEach>
 </tbody>
