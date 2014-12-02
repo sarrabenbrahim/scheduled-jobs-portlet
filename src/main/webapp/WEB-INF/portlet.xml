@@ -5,8 +5,8 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
   <portlet>
-    <portlet-name>ScheduledJobPortlet</portlet-name>
-    <portlet-class>org.jboss.portal.portlet.samples.ScheduledJob</portlet-class>
+    <portlet-name>scheduledJobsPortlet</portlet-name>
+    <portlet-class>org.exoplatform.portlet.samples.ScheduledJob</portlet-class>
     <supports>
       <mime-type>text/html</mime-type>
       <portlet-mode>view</portlet-mode>
