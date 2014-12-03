@@ -11,8 +11,6 @@
         <artifactId>platform</artifactId>
         <version>4.0.6</version>
     </parent>
-
-<<<<<<< HEAD
   <artifactId>scheduled-job</artifactId>
   <packaging>war</packaging>
   <name>Scheduled Job Portlet</name>
@@ -54,39 +52,4 @@
     <version>1.2</version>
   </dependency>
   </dependencies>
-=======
-
-    <artifactId>scheduled-jobs-portlet</artifactId>
-    <packaging>war</packaging>
-    <name>Scheduled Job Portlet</name>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                </configuration>
-            </plugin>
-        </plugins>
-        <finalName>scheduled-job</finalName>
-    </build>
-
-    <dependencies>
-
-        <dependency>
-            <groupId>javax.portlet</groupId>
-            <artifactId>portlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.exoplatform.kernel</groupId>
-            <artifactId>exo.kernel.component.common</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-    </dependencies>
->>>>>>> 5e62b55c2b3b8b579efddfe5bac8d3ca83c92f9f
 </project>
