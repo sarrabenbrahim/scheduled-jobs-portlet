@@ -14,7 +14,7 @@ import org.quartz.Trigger;
  */
 public class JobWrapper {
   private JobDetail jobDetail;
-  private List<Trigger> jobTrigger;
+  private Trigger jobTrigger;
   private String properties;
 
   public JobWrapper() {
@@ -28,11 +28,11 @@ public class JobWrapper {
     this.jobDetail = jobDetail;
   }
 
-  public List<Trigger> getJobTrigger() {
+  public Trigger getJobTrigger() {
     return jobTrigger;
   }
 
-  public void setJobTrigger(List<Trigger> jobTrigger) {
+  public void setJobTrigger(Trigger jobTrigger) {
     this.jobTrigger = jobTrigger;
   }
 

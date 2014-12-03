@@ -13,7 +13,7 @@
  <th>Job Name</th>
  <th>Job Group</th>
  <th>Properties</th>
- <th>Job DataMap</th>
+ <th>Next Execution</th>
 </tr>
 </thead>
 <tbody>
@@ -22,11 +22,7 @@
   <td>${aJob.getJobDetail().getKey().getName()}</td>
   <td>${aJob.getJobDetail().getGroup()}</td>
   <td>${aJob.getProperties()}</td>
-  <td>
-  <c:forEach var="trigger" varStatus="status" items="${aJob.getJobTrigger()}">
-  ${trigger.getNextFireTime()}
-  </c:forEach>
-  </td>
+  <td>${aJob.getJobTrigger().getNextFireTime()}</td>
  </tr>
 </c:forEach>
 </tbody>

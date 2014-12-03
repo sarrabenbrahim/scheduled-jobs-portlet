@@ -39,14 +39,17 @@ public class ScheduledJob extends GenericPortlet {
         wrapper.setJobDetail((JobDetailImpl) aJob);
         String properties = "";
         for(String key : aJob.getJobDataMap().getKeys()){
-          properties+=key + " : " +aJob.getJobDataMap().get(key);
+          properties+=key + " : " +aJob.getJobDataMap().get(key)+" - ";
         }
         wrapper.setProperties(properties);
         triggers = jobService.getTriggersOfJob(((JobDetailImpl) aJob).getName(), ((JobDetailImpl) aJob).getGroup().split(":")[1]);
-        for (Trigger trigger : triggers) {
-          trs.add(trigger);
+        //for (Trigger trigger : triggers) {
+          //trs.add(trigger);
+        //}
+        //wrapper.setJobTrigger(trs);
+        if(triggers[0]!=null) {
+          wrapper.setJobTrigger(triggers[0]);
         }
-        wrapper.setJobTrigger(trs);
         jobs.add(wrapper);
       }
     } catch (Exception e) {
